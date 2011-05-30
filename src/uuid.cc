@@ -72,10 +72,14 @@ Handle<Value> generate( const Arguments &args )
 			}
 			else
 			{
-				if( fmt == 0 ){
+				if( fmt == UUID_FMT_BIN ){
 					Buffer *retbuf = Buffer::New( len );
 					memcpy( Buffer::Data( retbuf ), gen, len );
 					retval = retbuf->handle_;
+				}
+				else if( fmt == UUID_FMT_SIV ){
+					len = strlen( (char*)gen );
+					retval = Encode( gen, len, UTF8 );
 				}
 				else{
 					retval = Encode( gen, len, UTF8 );
