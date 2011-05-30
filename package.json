@@ -1,0 +1,36 @@
+{
+    "name" : "ossp_uuid",
+    "keywords": [
+        "ossp",
+		"uuid",
+		"Universally Unique Identifier"
+    ],
+    "description": "OSSP uuid bindings for node.js",
+    "homepage": "http://github.com/mah0x211/node-ossp-uuid",
+    "version" : "0.0.1",
+    "main" : "./lib/ossp_uuid",
+    "directories" : {
+        "lib" : "./lib" 
+    },
+    "scripts" : {
+        "install" : "./install.sh" 
+    },
+    "engines" : {
+        "node" : ">= 0.3.7" 
+    },
+    "maintainers": [
+        {
+            "name": "Masatoshi Teruya",
+            "email": "mah0x211@gmail",
+            "web": "http://kontext.jp/" 
+        } 
+    ],
+    "repository": {
+        "type" : "git",
+        "url": "http://github.com/mah0x211/node-ossp-uuid.git" 
+    },
+    "bugs" : {
+        "mail" : "" ,
+        "web" : "http://github.com/mah0x211/node-ossp-uuid/issues" 
+    }
+}
