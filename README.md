@@ -4,7 +4,7 @@ OSSP uuid bindings for node.js
 
 ## Install
 
-    npm install 
+    npm install ossp-uuid
 
 ## Methods
 
