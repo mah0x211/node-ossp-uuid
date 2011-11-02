@@ -31,6 +31,6 @@
     },
     "bugs" : {
         "mail" : "" ,
-        "web" : "http://github.com/mah0x211/node-ossp-uuid/issues" 
+        "url" : "http://github.com/mah0x211/node-ossp-uuid/issues" 
     }
 }
