@@ -42,8 +42,8 @@ def configure(conf):
         conf.env.append_value("CPPFLAGS", '-I%s' % o.uuid_includes)
     
     if o.uuid:
-        conf.env.append_value("LDFLAGS", '-L%s' % o.uud)
-        # conf.env.append_value("LINKFLAGS", '-L%s' % o.uud)
+        conf.env.append_value("LDFLAGS", '-L%s' % o.uuid)
+        # conf.env.append_value("LINKFLAGS", '-L%s' % o.uuid)
     
     # print conf.env
     

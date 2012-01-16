@@ -83,6 +83,7 @@ Handle<Value> generate( const Arguments &args )
                     retval = Encode( gen, len, UTF8 );
                 }
                 else{
+                    len = strlen( (char*)gen );
                     retval = Encode( gen, len, UTF8 );
                 }
                 free( gen );
