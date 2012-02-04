@@ -20,14 +20,13 @@ def configure(conf):
     if not conf.env.CC: conf.fatal('c compiler not found')
     conf.check_tool('node_addon')
     
-    o = Options.options
     conf.env.append_value("CPPFLAGS", '-I./depend/include')
-    conf.env.append_value("LDFLAGS", '-L./depend/lib')
+    conf.env.append_value("LINKFLAGS", '-L./depend/lib')
     
     # print conf.env
     
     # check ossp-uuid libs
-    conf.check_cc( lib='uuid', mandatory=True )
+    conf.check_cc( header_name='uuid.h', mondatory=True )
 
 def build(bld):
     print 'build'

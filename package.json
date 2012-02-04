@@ -7,7 +7,7 @@
     ],
     "description": "OSSP uuid bindings for node.js",
     "homepage": "http://github.com/mah0x211/node-ossp-uuid",
-    "version" : "0.0.7",
+    "version" : "0.0.8",
     "main" : "./index.js",
     "scripts" : {
         "install" : "./install.sh" 
