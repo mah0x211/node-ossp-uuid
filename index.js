@@ -2,9 +2,9 @@
 	binding to oosp-uuid
 	author: masatoshi teruya
 	email: mah0x211@gmail.com
-	copyright (C) 2011, masatoshi teruya. all rights reserved.
+	(C) Masatoshi Teruya
 */
-module.exports = require( __dirname + '/../build/default/uuid_binding');
+module.exports = require( __dirname + '/build/default/uuid_binding');
 module.exports.BIN = 0;        /* binary representation (import/export) */
 module.exports.STR = 1;        /* string representation (import/export) */
 module.exports.SIV = 2;        /* single integer value  (import/export) */

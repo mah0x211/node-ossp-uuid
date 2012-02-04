@@ -12,22 +12,6 @@ def set_options(opt):
     opt.tool_options('compiler_cxx')
     opt.tool_options('compiler_cc')
     opt.tool_options('misc')
-    
-    opt.add_option( '--ossp-uuid-includes'
-        , action='store'
-        , type='string'
-        , default=False
-        , help='Directory containing libev header files'
-        , dest='uuid_includes'
-    )
-    
-    opt.add_option( '--ossp-uuid'
-        , action='store'
-        , type='string'
-        , default=False
-        , help='Link to a shared uuid libraries'
-        , dest='uuid'
-    )
 
 def configure(conf):
     conf.check_tool('compiler_cxx')
@@ -37,13 +21,8 @@ def configure(conf):
     conf.check_tool('node_addon')
     
     o = Options.options
-    
-    if o.uuid_includes:
-        conf.env.append_value("CPPFLAGS", '-I%s' % o.uuid_includes)
-    
-    if o.uuid:
-        conf.env.append_value("LDFLAGS", '-L%s' % o.uuid)
-        # conf.env.append_value("LINKFLAGS", '-L%s' % o.uuid)
+    conf.env.append_value("CPPFLAGS", '-I./depend/include')
+    conf.env.append_value("LDFLAGS", '-L./depend/lib')
     
     # print conf.env
     
