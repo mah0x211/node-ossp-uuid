@@ -6,8 +6,8 @@
         "Universally Unique Identifier"
     ],
     "description": "OSSP uuid bindings for node.js",
-    "homepage": "http://github.com/mah0x211/node-ossp-uuid",
-    "version" : "0.0.8",
+    "author": "Masatoshi Teruya <mah0x211@gmail.com>",
+    "version" : "0.0.9",
     "main" : "./index.js",
     "scripts" : {
         "install" : "./install.sh" 
@@ -15,13 +15,6 @@
     "engines" : {
         "node" : ">= 0.4.7" 
     },
-    "maintainers": [
-        {
-            "name": "Masatoshi Teruya",
-            "email": "mah0x211@gmail.com",
-            "web": "http://kontext.jp/" 
-        } 
-    ],
     "repository": {
         "type" : "git",
         "url": "http://github.com/mah0x211/node-ossp-uuid.git" 

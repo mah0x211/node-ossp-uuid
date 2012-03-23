@@ -4,7 +4,11 @@
 	email: mah0x211@gmail.com
 	(C) Masatoshi Teruya
 */
-module.exports = require( __dirname + '/build/default/uuid_binding');
+try{
+    module.exports = require( __dirname + '/build/default/uuid_binding');
+}catch(e){
+    module.exports = require( __dirname + '/build/Release/uuid_binding');
+}
 module.exports.BIN = 0;        /* binary representation (import/export) */
 module.exports.STR = 1;        /* string representation (import/export) */
 module.exports.SIV = 2;        /* single integer value  (import/export) */

@@ -12,6 +12,14 @@ def set_options(opt):
     opt.tool_options('compiler_cxx')
     opt.tool_options('compiler_cc')
     opt.tool_options('misc')
+    
+    opt.add_option( '--uuid'
+        , action='store'
+        , type='string'
+        , default=False
+        , help='uuid install'
+        , dest='uuid'
+    )
 
 def configure(conf):
     conf.check_tool('compiler_cxx')
@@ -20,13 +28,18 @@ def configure(conf):
     if not conf.env.CC: conf.fatal('c compiler not found')
     conf.check_tool('node_addon')
     
-    conf.env.append_value("CPPFLAGS", '-I./depend/include')
-    conf.env.append_value("LINKFLAGS", '-L./depend/lib')
+    o = Options.options
+
+    if o.uuid:
+        conf.env.append_value("CPPFLAGS", '-I%s/include' % o.uuid)
+        conf.env.append_value("LIBPATH", '-L%s/lib' % o.uuid)
     
     # print conf.env
     
     # check ossp-uuid libs
     conf.check_cc( header_name='uuid.h', mondatory=True )
+    conf.check_cc( lib='uuid', mandatory=True )
+
 
 def build(bld):
     print 'build'

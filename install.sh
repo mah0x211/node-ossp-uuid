@@ -54,5 +54,6 @@ LINKFLAGS="-L${MOD_DEPEND}/lib"
 LDFLAGS="-L${MOD_DEPEND}/lib"
 export CPPFLAGS
 export LINKFLAGS
+export LDFLAGS
 node-waf configure
 node-waf build
