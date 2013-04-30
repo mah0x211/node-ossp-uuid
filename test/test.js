@@ -1,5 +1,5 @@
 var util = require('util'),
-    uuid = require( __dirname + '/../lib/ossp_uuid');
+    uuid = require('../');
 
 console.log( 
     "version 1\n" +

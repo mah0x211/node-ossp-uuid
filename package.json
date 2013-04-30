@@ -7,13 +7,13 @@
     ],
     "description": "OSSP uuid bindings for node.js",
     "author": "Masatoshi Teruya <mah0x211@gmail.com>",
-    "version" : "0.0.9",
+    "version" : "0.1.0",
     "main" : "./index.js",
     "scripts" : {
         "install" : "./install.sh" 
     },
     "engines" : {
-        "node" : ">= 0.4.7" 
+        "node" : ">= 0.8.23" 
     },
     "repository": {
         "type" : "git",

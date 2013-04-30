@@ -108,3 +108,5 @@ void init( Handle<Object> target )
     NODE_SET_METHOD( target, "version", version );
     NODE_SET_METHOD( target, "generate", generate );
 };
+
+NODE_MODULE( ossp_uuid, init );
